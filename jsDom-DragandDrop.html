@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment</title>
+</head>
+<style type="text/css">
+	.div{
+		background: blue;
+		color: black;
+		height: 100px;
+		display: inline-block;
+		margin-bottom: 2px;
+		line-height: 100px;
+		text-align: center;
+	}
+
+	.div:nth-child(even){
+		background: orange;
+		color: white;
+		height: 100px;
+		display: inline-block;
+		margin-bottom: 2px;
+	}
+
+
+	.btn-div{
+		background: grey;
+		color: white;
+		height: 20px;
+		display: inline-block;
+		margin-bottom: 2px;
+		text-align: center;
+	}
+
+	.btn-div:nth-child(even){
+		background: grey;
+		color: white;
+		height: 20px;
+		display: inline-block;
+		margin-bottom: 2px;
+	}
+
+	button{
+		width: 100%;
+		display:block; 
+		cursor: pointer;
+		margin-top: 5px;
+		background: transparent;
+		border: none;
+		padding-top: 4px;
+	}
+	.clr{
+		width: 25%;
+		background: black;
+		color: white;
+		margin: auto;
+		margin-top: 10px;
+		height: 30px;
+		border-radius: 5px;
+		font-size: 12px;
+
+	}
+	.clr:hover{
+		background: green;
+		font-weight: bolder;
+		color: black;
+
+
+	}
+</style>
+<body style="width: 99%;margin: 1%; background = grey">
+
+
+<h1 style="text-align: center;"><i>Editor</i></h1>
+
+<div id="container" style="width: 80%;display: inline-block;">
+	
+
+</div>
+
+<div style="width: 20%;background:azure;display: inline-block;float: right;margin: auto;text-align: center;">
+	
+		<button onclick="generateDiv(1)"> 
+				<div class="btn-div" style="width: 100%"></div>
+		</button>
+		
+		<button onclick="generateDiv(2)"> 
+				<div class="btn-div" style="width: 49%"></div>
+				<div class="btn-div" style="width: 49%"></div>
+		</button>
+		
+		<button onclick="generateDiv(3)"> 
+				<div class="btn-div" style="width: 32%"></div>
+				<div class="btn-div" style="width: 32%"></div>
+				<div class="btn-div" style="width: 32%"></div>
+		</button>
+		
+		<button onclick="generateDiv(4)"> 
+				<div class="btn-div" style="width: 24%"></div>
+				<div class="btn-div" style="width: 24%"></div>
+				<div class="btn-div" style="width: 22%"></div>
+				<div class="btn-div" style="width: 24%"></div>
+		</button>
+	   <button class="clr" onclick="clear1()">
+	   	Clear All
+	   </button>
+
+</div>
+
+<script type="text/javascript">
+	
+
+	function generateDiv(col){
+		// clear();
+			for(i=1;i<=col;i++){
+				var width = 100/col;
+					document.getElementById("container").innerHTML += ("<div class='div' style='width:"+width+"%'>"+i+"</div>");	
+			}
+			document.getElementById("container").innerHTML += ("<br>");
+	}
+
+
+		function clear1() {
+			console.log('hello');
+			document.getElementById("container").innerHTML = " ";
+	}
+
+
+</script>
+</body>
+</html>
