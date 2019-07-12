@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            jquerypage
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#rd1').click(function(){
+                $('#button3').click(function(){
+                    $("#txt1").css({"background-color":"red"});
+                    $("#txt1").fadeOut(2000);
+                    $("#txt2").css({"background-color":"red"});
+                    $("#txt3").css({"background-color":"red"});
+                    $("#txt4").css({"background-color":"red"});
+                });
+                });
+                
+                $('#rd2').click(function(){
+                $('#button3').click(function(){
+                    $("#txt3").css({"background-color":"blue"});
+                    $("#txt4").css({"background-color":"blue"});
+                    $("#txt1").hide();
+                    $("#txt2").hide();
+                });
+            });
+
+            $('#rd3').click(function(){
+                $('#button3').click(function(){
+                    $("#button3").slideToggle();
+                    $("#txt3").css({"background-color":"green"});
+                    $("#txt4").css({"background-color":"green"});
+                    $("#txt1").css({"background-color":"green"});
+                    $("#txt2").css({"background-color":"green"});
+                });
+            });
+            
+            });
+        </script>
+    </head>
+    <style>
+            .cd{
+                background-color: rgb(128,222,128);
+                text-align: center;
+            }
+        </style>
+    <body class="cd">
+        
+            
+    </div>
+
+      
+         <form>
+                <input type="radio" name="gender" value="red" id = rd1> red<br>
+                <input type="radio" name="gender" value="blue" id = rd2> blue<br>
+                <input type="radio" name="gender" value="green" id = rd3> green<br>  
+              </form> 
+              <br>
+         <div>
+                 <input type = "txt1" id = "txt1"/>
+                 <input type = "txt2" id = "txt2"/>
+                 <input type = "txt3" id = "txt3"/>
+                 <input type = "txt4" id = "txt4"/>
+             </div>
+<br>
+             <div>
+                   
+                     <button type = "button" id = "button3">click me for changing the property</button>
+                 </div>
+    </body>
+
+</html>
